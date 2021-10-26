@@ -31,19 +31,15 @@ class Home extends StatelessWidget {
                 child: Container(
                   height: 150,
                   width: 150,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                  ),
                   child: Image(
                     fit: BoxFit.cover,
-                    image: NetworkImage(
-                        'https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80'),
+                    image: AssetImage('assets/profile_image.png'),
                   ),
                 ),
               ),
               SizedBox(height: 20),
               Text(
-                'Haroon',
+                'Cassian',
                 style: TextStyle(
                   fontSize: 32,
                   color: Color(0xFFFF9881),
@@ -83,15 +79,16 @@ class Home extends StatelessWidget {
                       Text("Projects"),
                     ],
                   ),
-                  SizedBox(width: 10),
-                  Text(
-                    "|",
-                    style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w300,
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    child: Text(
+                      "|",
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w300,
+                      ),
                     ),
                   ),
-                  SizedBox(width: 10),
                   Column(
                     children: const [
                       Text("20"),
@@ -99,15 +96,16 @@ class Home extends StatelessWidget {
                       Text("Students"),
                     ],
                   ),
-                  SizedBox(width: 10),
-                  Text(
-                    "|",
-                    style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w300,
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    child: Text(
+                      "|",
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w300,
+                      ),
                     ),
                   ),
-                  SizedBox(width: 10),
                   Column(
                     children: const [
                       Text("100"),
@@ -117,7 +115,165 @@ class Home extends StatelessWidget {
                   ),
                   SizedBox(width: 10),
                 ],
-              )
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 25.0),
+                child: Container(
+                  width: 250,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    gradient: LinearGradient(
+                      colors: const [
+                        Color(0xFFFFC09B),
+                        Color(0xFFFF9A82),
+                      ],
+                    ),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'FOLLOW',
+                      style: TextStyle(
+                        fontSize: 17,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.grid_4x4_outlined,
+                    color: Color(0xFFFF9A82),
+                  ),
+                  SizedBox(width: 50),
+                  Icon(
+                    Icons.screen_lock_rotation,
+                    color: Color(0xFFFF9A82),
+                  )
+                ],
+              ),
+              SizedBox(height: 10),
+              Expanded(
+                child: Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[300],
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(25),
+                      topRight: Radius.circular(25),
+                    ),
+                  ),
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.only(top: 8.0, left: 15, right: 15),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 5.0),
+                          child: Container(
+                            height: 4,
+                            width: 70,
+                            color: Colors.black,
+                          ),
+                        ),
+                        Text('Photos'),
+                        SizedBox(height: 12),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Container(
+                                height: 85,
+                                width: 75,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  image: DecorationImage(
+                                    image: AssetImage("assets/image1.png"),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Container(
+                                height: 85,
+                                width: 75,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  image: DecorationImage(
+                                    image: AssetImage("assets/image2.png"),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Container(
+                                height: 85,
+                                width: 75,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  image: DecorationImage(
+                                    image: AssetImage("assets/image3.png"),
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Container(
+                                height: 85,
+                                width: 75,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  image: DecorationImage(
+                                    image: AssetImage("assets/image4.png"),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Container(
+                                height: 85,
+                                width: 75,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  image: DecorationImage(
+                                    image: AssetImage("assets/image5.png"),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Container(
+                                height: 85,
+                                width: 75,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  image: DecorationImage(
+                                    image: AssetImage("assets/image6.png"),
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
