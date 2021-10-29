@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_6pm/widgets/home/post_image.dart';
 
 class UserPortfolio extends StatelessWidget {
-  const UserPortfolio({
+  UserPortfolio({
     Key? key,
   }) : super(key: key);
 
@@ -27,21 +27,29 @@ class UserPortfolio extends StatelessWidget {
             const Text('Photos'),
             Expanded(
               child: GridView(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                ),
-                children: List.generate(6, (i) {
-                  return PostImage(
-                    image: 'assets/image${i + 1}.png',
-                  );
-                }),
-              ),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                  ),
+                  children: photos.map((image) {
+                    return PostImage(
+                      image: image,
+                    );
+                  }).toList()),
             ),
           ],
         ),
       ),
     );
   }
+
+  List<String> photos = [
+    "assets/image1.png",
+    "assets/image2.png",
+    "assets/image3.png",
+    "assets/image4.png",
+    "assets/image5.png",
+    "assets/image6.png",
+  ];
 }
